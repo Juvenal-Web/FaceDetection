@@ -30,6 +30,8 @@ and open the template in the editor.
         <!-- CSS -->
         <link rel="stylesheet" href="css/index.css"> 
         <!-- JS -->
+        <script src="js/face.js"></script>
+        <script src="js/portrait.js"></script>
         <script src="js/index.js"></script>
 
     </head>
@@ -41,14 +43,14 @@ and open the template in the editor.
         </div>
 
         <div class="row container-fluid">
-            <div id="img-container" class="col-xs-12">
-                
+            <div id="img_container" class="col-xs-12">
+
             </div>
         </div>
-        
+
         <div class="row container-fluid">
             <div class="col-xs-12">
-                <button type="button" class="btn btn-primary btn-lg center-block">
+                <button id="upload_button" type="button" class="btn btn-primary btn-lg center-block">
                     <span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Upload
                 </button>
             </div>
@@ -62,22 +64,25 @@ and open the template in the editor.
                         <input type="file" id="uploading_file" class="hidden" accept="image/*" name="image" capture="image"/>
                     </div>
                     <div>
-                        <button id="btnSend" type="submit" class="hidden btn btn-success center-block">
+                        <button id="send_button" type="submit" class="hidden btn btn-success btn-lg center-block col-xs-6">
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Send
                         </button>
+                        <button id="other_image_button" type="button" class="hidden btn btn-info btn-lg center-block col-xs-6">
+                            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Upload
+                        </button>
                     </div>
-                </form>
+                </form>                              
             </div>
         </div>
 
         <div id="resultsContainer" class="hidden row container-fluid">
             <div class="col-xs-12">
-                <div class="panel panel-success">
+                <div class="panel panel-success center-block">
                     <div class="panel-heading">
                         <h3 class="panel-title">Image Details</h3>
                     </div>
-                    <div id="details-emotions" class="panel-body">
-                        Panel content
+                    <div id="details_emotions" class="panel-body">
+
                     </div>
                 </div>
             </div>
